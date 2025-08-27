@@ -33,7 +33,7 @@
                         Proceed
                     </v-btn>
                     <p class="forgot-pass text-white ms-2" @click="$router.push('/forgot-password')">Forgot password?</p>
-                    <h6 class="system-version text-center text-grey-darken-2">Tubig Carmelo Ordering System UAT v1.0.0</h6>
+                    <h6 class="system-version text-center text-grey-darken-1">Tubig Carmelo Ordering System UAT v1.0.0</h6>
                 </v-form>
             </v-sheet>
             <v-snackbar v-model="snackbar.visible" :color="snackbar.color" timeout="4000" top>
@@ -150,6 +150,6 @@ img {
 }
 
 .system-version {
-    margin-top: 220px !important;
+    margin-top: 250px !important;
 }
 </style>
