@@ -150,7 +150,7 @@ img {
 }
 
 .proceed-btn {
-    margin-top: 18px;
+    margin-top: 15px !important;
 }
 
 .system-version {
