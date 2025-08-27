@@ -148,6 +148,6 @@ img {
 }
 
 .system-version {
-    margin-top: 80px;
+    margin-top: 80px !important;
 }
 </style>
