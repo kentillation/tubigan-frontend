@@ -2,7 +2,7 @@
     <div class="login-bg">
         <v-container class="d-flex align-center justify-center">
             <v-sheet>
-                <div class="d-flex justify-center my-15">
+                <div class="d-flex justify-center my-10">
                     <img :src="logo" loading="lazy" alt="Logo" />
                 </div>
                 <v-form ref="form" @submit.prevent="handleLogin" v-model="isFormValid" class="pa-4">
@@ -32,8 +32,8 @@
                     <v-btn :disabled="!isFormValid || loading" type="submit" color="#004fb6" size="large" class="mt-3" height="45" block rounded>
                         Proceed
                     </v-btn>
-                    <p class="forgot-pass text-white mt-2 ms-2" @click="$router.push('/forgot-password')">Forgot password?</p>
-                    <h6 class="mt-15 text-center text-grey-darken-2">Tubig Carmelo Online Ordering System v1.0.0</h6>
+                    <p class="forgot-pass text-white mt-3 ms-2" @click="$router.push('/forgot-password')">Forgot password?</p>
+                    <h6 class="mt-10 text-center text-grey-darken-2">Tubig Carmelo Online Ordering System v1.0.0</h6>
                 </v-form>
             </v-sheet>
             <v-snackbar v-model="snackbar.visible" :color="snackbar.color" timeout="4000" top>
