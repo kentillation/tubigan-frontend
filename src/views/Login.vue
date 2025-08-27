@@ -29,7 +29,7 @@
                         :append-inner-icon="showPassword ? 'mdi-eye-off' : 'mdi-eye-outline'" 
                         @click:append-inner="showPassword = !showPassword" />
 
-                    <v-btn :disabled="!isFormValid || loading" type="submit" color="#004fb6" size="large" class="mt-6" height="45" block rounded>
+                    <v-btn :disabled="!isFormValid || loading" type="submit" color="#004fb6" size="large" class="proceed-btn" height="45" block rounded>
                         Proceed
                     </v-btn>
                     <p class="forgot-pass text-white ms-2" @click="$router.push('/forgot-password')">Forgot password?</p>
@@ -147,6 +147,10 @@ img {
 
 .v-input__details {
     display: flex;
+}
+
+.proceed-btn {
+    margin-top: 12px;
 }
 
 .system-version {
