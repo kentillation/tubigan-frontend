@@ -9,28 +9,28 @@
                 </div>
             </div>
         </v-col>
-        <v-col cols="12">
+        <v-col cols="12" class="pt-0">
             <v-container>
-                <div class="d-flex justify-space-between mb-3">
-                    <h5><v-icon size="small">mdi-account-circle-outline</v-icon>&nbsp; Account</h5>
-                    <v-icon size="small" @click="openAccountDialog" class="text-info">mdi-chevron-right</v-icon>
-                </div>
-                <div class="d-flex justify-space-between mb-3">
-                    <h5><v-icon size="small">mdi-theme-light-dark</v-icon>&nbsp; Theme</h5>
-                    <v-icon size="small" @click="themeDialog = true" class="text-info">mdi-chevron-right</v-icon>
-                </div>
-                <div class="d-flex justify-space-between mb-3">
-                    <h5><v-icon size="small">mdi-information-outline</v-icon>&nbsp; About</h5>
-                    <v-icon size="small" class="text-info">mdi-chevron-right</v-icon>
-                </div>
-                <div class="d-flex justify-space-between mb-3">
-                    <h5><v-icon size="small">mdi-help-circle-outline</v-icon>&nbsp; Help</h5>
-                    <v-icon size="small" class="text-info">mdi-chevron-right</v-icon>
-                </div>
-                <div class="d-flex justify-space-between mb-3">
-                    <h5><v-icon size="small">mdi-door-open</v-icon>&nbsp; Signout</h5>
-                    <v-icon @click="showLogout" size="small" class="text-info">mdi-chevron-right</v-icon>
-                </div>
+                <v-btn @click="openAccountDialog" class="btn-list" variant="flat">
+                    <h5><v-icon>mdi-account-circle-outline</v-icon>&nbsp; Account</h5>
+                    <v-icon class="chevron-icon">mdi-chevron-right</v-icon>
+                </v-btn>
+                <v-btn @click="themeDialog = true" class="btn-list" variant="flat">
+                    <h5><v-icon>mdi-theme-light-dark</v-icon>&nbsp; Theme</h5>
+                    <v-icon class="chevron-icon">mdi-chevron-right</v-icon>
+                </v-btn>
+                <v-btn class="btn-list" variant="flat">
+                    <h5><v-icon>mdi-information-outline</v-icon>&nbsp; About</h5>
+                    <v-icon class="chevron-icon">mdi-chevron-right</v-icon>
+                </v-btn>
+                <v-btn class="btn-list" variant="flat">
+                    <h5><v-icon>mdi-help-circle-outline</v-icon>&nbsp; Help</h5>
+                    <v-icon class="chevron-icon">mdi-chevron-right</v-icon>
+                </v-btn>
+                <v-btn @click="showLogout" class="btn-list" variant="flat">
+                    <h5><v-icon>mdi-door-open</v-icon>&nbsp; Signout</h5>
+                    <v-icon class="chevron-icon">mdi-chevron-right</v-icon>
+                </v-btn>
             </v-container>
         </v-col>
     </v-row>
@@ -46,7 +46,7 @@
             <div class="d-flex justify-space-between pa-3">
                 <v-btn prepend-icon="mdi-magic-staff" color="primary" variant="tonal">Apply</v-btn>
                 <v-btn prepend-icon="mdi-information-outline" color="error" variant="tonal"
-                    @click="accountDialog = false">Change later</v-btn>
+                    @click="accountDialog = false">Later</v-btn>
             </div>
         </v-card>
     </v-dialog>
@@ -153,5 +153,20 @@ export default {
 
 img {
     width: 90px;
+}
+
+.btn-list {
+    display: flex !important;
+    justify-content: space-between !important;
+    border-radius: 20px;
+    padding: 0 !important;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+.chevron-icon {
+    color: #0072be;
+    position: absolute;
+    right: 0px;
 }
 </style>

@@ -11,7 +11,51 @@
         </v-col>
         <v-col cols="12">
             <v-container>
-                
+                <div class="history-content">
+                    <span class="d-flex flex-column">
+                        <h5 class="text-grey">1:46 PM</h5>
+                        <h4 class="mb-2">Refill Water</h4>
+                    </span>
+                    <span>
+                        <h3>100 PHP</h3>
+                    </span>
+                </div>
+                <div class="history-content">
+                    <span class="d-flex flex-column">
+                        <h5 class="text-grey">5:43 PM</h5>
+                        <h4 class="mb-2">Buy Water w/ Container</h4>
+                    </span>
+                    <span>
+                        <h3>300 PHP</h3>
+                    </span>
+                </div>
+                <div class="history-content">
+                    <span class="d-flex flex-column">
+                        <h5 class="text-grey">10:58 PM</h5>
+                        <h4 class="mb-2">Buy Container</h4>
+                    </span>
+                    <span>
+                        <h3>150 PHP</h3>
+                    </span>
+                </div>
+                <div class="history-content">
+                    <span class="d-flex flex-column">
+                        <h5 class="text-grey">11:27 PM</h5>
+                        <h4 class="mb-2">Refill Water</h4>
+                    </span>
+                    <span>
+                        <h3>100 PHP</h3>
+                    </span>
+                </div>
+                <div class="history-content">
+                    <span class="d-flex flex-column">
+                        <h5 class="text-grey">1:33 PM</h5>
+                        <h4 class="mb-2">Buy Water w/ Container</h4>
+                    </span>
+                    <span>
+                        <h3>50 PHP</h3>
+                    </span>
+                </div>
             </v-container>
         </v-col>
     </v-row>
@@ -60,5 +104,13 @@ export default {
 
 img {
     width: 90px;
+}
+
+.history-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 25px;
 }
 </style>

@@ -9,9 +9,9 @@
                 </div>
             </div>
         </v-col>
-        <v-col cols="12">
+        <v-col cols="12" class="pt-0">
             <v-container>
-                
+                <v-date-picker color="#0072be"></v-date-picker>
             </v-container>
         </v-col>
     </v-row>

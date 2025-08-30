@@ -93,20 +93,20 @@ thead .v-data-table__th .v-data-table-header__content {
 }
 
 .connection-container {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   width: 100%;
-  z-index: 9999;
+  /* z-index: 9999; */
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
 .connection-banner {
+  width: 100%;
   text-align: center;
-  padding: 6px 30px;
-  border-radius: 0 0 30px 30px;
-  font-size: 12px;
+  padding: 2px;
+  font-size: 10px;
   gap: 8px;
   display: flex;
   align-items: center;
@@ -121,6 +121,6 @@ thead .v-data-table__th .v-data-table-header__content {
   color: #fffafa;
 }
 .connection-banner.waiting {
-  background: #118aa0;
+  background: #1126a0;
   color: #fffafa;
 }

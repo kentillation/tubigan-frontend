@@ -11,23 +11,32 @@
         </v-col>
         <v-col cols="12">
             <div class="text-center">
-                <h3>What's on your mind right now?</h3>
-                <v-container class="d-flex mt-10 px-9">
-                    <v-btn size="large" class="w-50 ms-0" height="90"
-                        @click="toRefilling">
-                        <span class="d-flex flex-column align-center">
-                            <v-icon>mdi-format-color-fill</v-icon>
-                            Refill
+                <span class="text-grey">What's your transaction today?</span>
+                <div class="btn-card-container mt-9 ps-5 pe-8">
+                    <v-btn size="large" class="btn-card" height="130"
+                        @click="toRefillWater">
+                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                            <span style="font-size: 50px;"><v-icon>mdi-basket-fill</v-icon></span>
+                            <span style="font-size: 12px;" class="mt-2">Refill Water</span>
                         </span>
                     </v-btn>&nbsp;&nbsp;
-                    <v-btn size="large" class="w-50" height="90"
-                        @click="showAlert('This feature is coming soon!')">
-                        <span class="d-flex flex-column align-center">
-                            <v-icon>mdi-cash-fast</v-icon>
-                            Buy
+                    <v-btn size="large" class="btn-card" height="130"
+                        @click="toBuyWaterWithContainer">
+                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                            <span style="font-size: 50px;"><v-icon>mdi-cup-water</v-icon></span>
+                            <span style="font-size: 12px;" class="mt-2">Buy Water <br /> w/ Container</span>
                         </span>
                     </v-btn>
-                </v-container>
+                </div>
+                <div class="btn-card-container ps-5 pe-8">
+                    <v-btn size="large" class="btn-card" height="130"
+                        @click="toBuyContainer">
+                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                            <span style="font-size: 50px;"><v-icon>mdi-bottle-soda-outline</v-icon></span>
+                            <span style="font-size: 12px;" class="mt-2">Buy Container</span>
+                        </span>
+                    </v-btn>&nbsp;&nbsp;
+                </div>
             </div>
         </v-col>
     </v-row>
@@ -56,8 +65,14 @@ export default {
         };
     },
     methods: {
-        toRefilling() {
-            this.$router.push('/refilling');
+        toRefillWater() {
+            this.$router.push('/refill-water');
+        },
+        toBuyWaterWithContainer() {
+            this.$router.push('/buy-water-with-container');
+        },
+        toBuyContainer() {
+            this.$router.push('/buy-container');
         },
         showAlert(message) {
             this.$refs.alertRef.showSnackbarAlert(message, "error");
@@ -79,5 +94,22 @@ export default {
 
 img {
     width: 90px;
+}
+
+.btn-card-container {
+    display: flex;
+    margin-bottom: 12px;
+}
+
+.btn-card {
+    width: 50%;
+}
+
+span {
+  text-transform: none;
+}
+
+.v-btn:hover {
+    background-color: #002753;
 }
 </style>

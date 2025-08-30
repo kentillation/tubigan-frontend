@@ -10,39 +10,34 @@
     </div>
     <v-main>
       <template v-if="!isNotFoundPage">
-        <v-app-bar v-if="showMenu" class="px-3" location="bottom" prominent>
-          
+        <v-app-bar v-if="showMenu && ['Home','History','Schedule','Profile'].includes(currentPage)" class="px-3" location="bottom" prominent>
           <div @click="toHome" class="d-flex align-center flex-column" icon>
-            <v-icon class="text-grey" :class="{ 'active-icon': currentPage === 'Home' }">mdi-home-outline</v-icon>
-            <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'Home' }">Home</span>
+            <v-icon class="text-grey" 
+            :class="{ 'active-icon': currentPage === 'Home'}">
+              mdi-home-outline
+            </v-icon>
+            <span class="nav-text" :class="{ 'inactive-nav-text': currentPage === 'Home' }">Home</span>
           </div>
 
           <v-spacer></v-spacer>
           
-          <div @click="toHistory" class="me-5 d-flex align-center flex-column" icon>
+          <div @click="toHistory" class="d-flex align-center flex-column" icon>
             <v-icon class="text-grey" :class="{ 'active-icon': currentPage === 'History' }">mdi-history</v-icon>
             <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'History' }">History</span>
           </div>
 
           <v-spacer></v-spacer>
 
-          <div @click="toSchedule" class="d-flex align-center flex-column mb-5 position-fixed" style="margin-left: 160px;" icon>
-            <v-icon class="bg-grey-lighten-2 text-grey pa-6 mb-3"  :class="{ 'active-icon': currentPage === 'Schedule' }">mdi-calendar</v-icon>
-            <span class="nav-text mb-3" :class="{ 'active-nav-text': currentPage === 'Schedule' }">Schedule</span>
+          <div @click="toSchedule" class="d-flex align-center flex-column" icon>
+            <v-icon class="text-grey"  :class="{ 'active-icon': currentPage === 'Schedule' }">mdi-calendar</v-icon>
+            <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'Schedule' }">Schedule</span>
           </div>
 
           <v-spacer></v-spacer>
 
-          <div @click="toProfile" class="ms-5 d-flex align-center flex-column" icon>
+          <div @click="toProfile" class="d-flex align-center flex-column" icon>
             <v-icon class="text-grey" :class="{ 'active-icon': currentPage === 'Profile' }">mdi-account-circle-outline</v-icon>
             <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'Profile' }">Profile</span>
-          </div>
-
-          <v-spacer></v-spacer>
-
-          <div @click="toMore" class="d-flex align-center flex-column" icon>
-            <v-icon class="text-grey" :class="{ 'active-icon': currentPage === 'More' }">mdi-dots-vertical</v-icon>
-            <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'More' }">More</span>
           </div>
 
         </v-app-bar>
@@ -160,10 +155,10 @@ export default {
   },
   computed: {
     showSidebar() {
-      return this.$route.name !== 'LoginPage' && this.$route.name !== 'Reference' && !this.isNotFoundPage;
+      return this.$route.name !== 'LoginPage' && !this.isNotFoundPage;
     },
     showMenu() {
-      return this.$route.name !== 'LoginPage' && this.$route.name !== 'Reference' && !this.isNotFoundPage;
+      return this.$route.name !== 'LoginPage' && !this.isNotFoundPage;
     },
   },
   methods: {
@@ -183,10 +178,6 @@ export default {
       this.$router.push('/profile');
       this.currentPage = 'Profile';
     },
-    toMore() {
-      this.$router.push('/more');
-      this.currentPage = 'More';
-    },
   }
 };
 </script>
@@ -204,10 +195,18 @@ export default {
 
 .active-icon {
   transition: all 0.3s ease;
-  /* padding: 18px; */
   border-radius: 30px;
   background-color: #001346 !important;
   color: #fff !important;
+}
+
+.inactive-icon {
+  background-color: none !important;
+}
+
+.inactive-nav-text {
+  color: #5f5f5f !important;
+  font-weight: 600;
 }
 
 .active-nav-text {
