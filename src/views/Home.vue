@@ -15,14 +15,14 @@
                 <div class="btn-card-container mt-9 ps-5 pe-8">
                     <v-btn size="large" class="btn-card" height="130"
                         @click="toRefillWater">
-                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                        <span style="color: #1d59ff;" class="d-flex flex-column align-center">
                             <span style="font-size: 50px;"><v-icon>mdi-basket-fill</v-icon></span>
                             <span style="font-size: 12px;" class="mt-2">Refill Water</span>
                         </span>
                     </v-btn>&nbsp;&nbsp;
                     <v-btn size="large" class="btn-card" height="130"
                         @click="toBuyWaterWithContainer">
-                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                        <span style="color: #1d59ff;" class="d-flex flex-column align-center">
                             <span style="font-size: 50px;"><v-icon>mdi-cup-water</v-icon></span>
                             <span style="font-size: 12px;" class="mt-2">Buy Water <br /> w/ Container</span>
                         </span>
@@ -31,7 +31,7 @@
                 <div class="btn-card-container ps-5 pe-8">
                     <v-btn size="large" class="btn-card" height="130"
                         @click="toBuyContainer">
-                        <span style="color: #0072be;" class="d-flex flex-column align-center">
+                        <span style="color: #1d59ff;" class="d-flex flex-column align-center">
                             <span style="font-size: 50px;"><v-icon>mdi-bottle-soda-outline</v-icon></span>
                             <span style="font-size: 12px;" class="mt-2">Buy Container</span>
                         </span>

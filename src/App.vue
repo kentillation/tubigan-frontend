@@ -16,7 +16,7 @@
             :class="{ 'active-icon': currentPage === 'Home'}">
               mdi-home-outline
             </v-icon>
-            <span class="nav-text" :class="{ 'inactive-nav-text': currentPage === 'Home' }">Home</span>
+            <span class="nav-text" :class="{ 'active-nav-text': currentPage === 'Home' }">Home</span>
           </div>
 
           <v-spacer></v-spacer>
@@ -196,21 +196,12 @@ export default {
 .active-icon {
   transition: all 0.3s ease;
   border-radius: 30px;
-  background-color: #001346 !important;
+  background-color: #1d59ff !important;
   color: #fff !important;
 }
 
-.inactive-icon {
-  background-color: none !important;
-}
-
-.inactive-nav-text {
-  color: #5f5f5f !important;
-  font-weight: 600;
-}
-
 .active-nav-text {
-  color: #001346 !important;
+  color: #1d59ff !important;
   font-weight: 600;
 }
 
