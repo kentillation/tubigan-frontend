@@ -12,18 +12,20 @@
         <v-col cols="12">
             <div class="text-center">
                 <h3>What's on your mind right now?</h3>
-                <v-container class="mt-10 px-6">
-                    <v-btn size="large" class="w-100 mb-5" color="primary"
+                <v-container class="d-flex mt-10 px-9">
+                    <v-btn size="large" class="w-50 ms-0" height="90"
                         @click="toRefilling">
-                        <span>I want to refill my container</span>
-                    </v-btn>
-                    <v-btn size="large" class="w-100 mb-5" color="primary"
+                        <span class="d-flex flex-column align-center">
+                            <v-icon>mdi-format-color-fill</v-icon>
+                            Refill
+                        </span>
+                    </v-btn>&nbsp;&nbsp;
+                    <v-btn size="large" class="w-50" height="90"
                         @click="showAlert('This feature is coming soon!')">
-                        <span>I want to buy with container</span>
-                    </v-btn>
-                    <v-btn size="large" class="w-100 mb-5" color="primary"
-                        @click="showAlert('This feature is coming soon!')">
-                        <span>I want to sell water</span>
+                        <span class="d-flex flex-column align-center">
+                            <v-icon>mdi-cash-fast</v-icon>
+                            Buy
+                        </span>
                     </v-btn>
                 </v-container>
             </div>
