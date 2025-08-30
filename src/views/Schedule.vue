@@ -11,7 +11,7 @@
         </v-col>
         <v-col cols="12" class="pt-0">
             <v-container>
-                <v-date-picker color="#1d59ff"></v-date-picker>
+                <v-date-picker color="#3c70ff"></v-date-picker>
             </v-container>
         </v-col>
     </v-row>

@@ -3,7 +3,7 @@ body {
 }
 
 h2, h3, h4, h5, p, .v-list-item {
-    color: #1d59ff;
+    color: #3c70ff;
 }
 
 .v-list-item {
@@ -11,13 +11,13 @@ h2, h3, h4, h5, p, .v-list-item {
 }
 
 .v-list-item:hover {
-    background-color: #1d59ff;
+    background-color: #3c70ff;
     color: #e8faff;
     transition: all 0.3s ease-in-out;
 }
 
 .v-app-bar .v-icon {
-    color: #1d59ff;
+    color: #3c70ff;
 }
 
 .v-list-item .v-icon:hover {

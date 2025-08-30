@@ -116,7 +116,7 @@ export default {
 }
 
 .top-icon {
-    color: #1d59ff;
+    color: #3c70ff;
 }
 
 img {

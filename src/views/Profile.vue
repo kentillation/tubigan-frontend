@@ -165,7 +165,7 @@ img {
 }
 
 .chevron-icon {
-    color: #1d59ff;
+    color: #3c70ff;
     position: absolute;
     right: 0px;
 }
